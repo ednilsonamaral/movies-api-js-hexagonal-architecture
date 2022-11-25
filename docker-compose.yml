@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+    db:
+        image: mongo
+        restart: always
+        ports:
+            - 27017:27017
+
+    users:
+        image: users
+        build:
+            context: .
+            dockerfile: dockerfile
+        depends_on:
+            - db
+        links:
+            - db
+        ports:
+            - 3002:3002
+        environment:
+            NODE_ENV: production

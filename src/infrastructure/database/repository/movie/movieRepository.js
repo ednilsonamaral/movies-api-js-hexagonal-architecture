@@ -1,6 +1,6 @@
 import Repository from '../repository.js';
 
-export default class userRepository extends Repository {
+export default class movieRepository extends Repository {
 	constructor({ moviesModel, movieMapper, logger }) {
 		super({
 			ResourceModel: moviesModel,

@@ -7,8 +7,8 @@ services:
         ports:
             - 27017:27017
 
-    users:
-        image: users
+    movies:
+        image: movies
         build:
             context: .
             dockerfile: dockerfile

@@ -2,7 +2,7 @@ import Joi from 'joi';
 
 export default () => ({
 	movie: Joi.object().keys({
-		user_id: Joi.number().required(),
+		movie_id: Joi.number().required(),
     title: Joi.string().required(),
     original_title: Joi.string().required(),
     description: Joi.string().required(),
